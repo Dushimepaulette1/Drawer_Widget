@@ -1,10 +1,12 @@
-```markdown
+````markdown
 A simple and engaging Pizza Palace app demonstrating the Flutter Drawer widget for navigation. This demo shows how to create a sliding menu with dynamic content updates.
 
 ## 🍕 About the App
+
 Pizza Palace is a fun food app that uses a Drawer for navigation between different sections:
+
 - **Home**: Welcome page
-- **Menu**: Browse delicious pizzas  
+- **Menu**: Browse delicious pizzas
 - **Cart**: View your order
 - **Settings**: App configuration
 
@@ -16,6 +18,8 @@ Pizza Palace is a fun food app that uses a Drawer for navigation between differe
    git clone <your-repo-url>
    cd <repository-name>
    ```
+````
+
 3. **Get dependencies**:
    ```bash
    flutter pub get
@@ -31,17 +35,14 @@ Pizza Palace is a fun food app that uses a Drawer for navigation between differe
 2. **Navigate**: Tap any menu item (Home, Menu, Cart, Settings) to switch pages
 3. **Watch the Magic**: The app bar title and main content update automatically!
 
-
-
 ## 📱 App Preview
 
-![Pizza Palace App Screenshot](![<img width="418" height="865" alt="image" src="https://github.com/user-attachments/assets/f0267430-f633-4efc-8539-13337d2e6370" />
-]()
-)
+![Pizza Palace App Screenshot](abb.png)
 
 ## 📝 Code Highlights
 
 The demo showcases:
+
 - Simple Drawer implementation
 - Clean navigation pattern
 - Efficient state management with ValueNotifier
