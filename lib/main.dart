@@ -7,18 +7,16 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(home: PizzaApp());
   }
 }
+
 class PizzaApp extends StatelessWidget {
   PizzaApp({super.key});
 
-
   final ValueNotifier<String> currentPage = ValueNotifier<String>('Home');
-
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +57,6 @@ class PizzaApp extends StatelessWidget {
               },
             ),
 
-
             ListTile(
               leading: Icon(Icons.restaurant, color: Colors.red),
               title: Text('Menu'),
@@ -68,7 +65,6 @@ class PizzaApp extends StatelessWidget {
                 Navigator.pop(context);
               },
             ),
-
 
             ListTile(
               leading: Icon(Icons.shopping_cart, color: Colors.red),
@@ -79,7 +75,6 @@ class PizzaApp extends StatelessWidget {
               },
             ),
 
-
             ListTile(
               leading: Icon(Icons.settings, color: Colors.red),
               title: Text('Settings'),
@@ -87,5 +82,43 @@ class PizzaApp extends StatelessWidget {
                 currentPage.value = 'Settings';
                 Navigator.pop(context);
               },
+            ),
+          ],
+        ),
+      ),
 
-
+      body: Center(
+        child: ValueListenableBuilder(
+          valueListenable: currentPage,
+          builder: (context, value, child) {
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                if (value == 'Home')
+                  Text(
+                    'Welcome to Pizza Palace! 🍕',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                if (value == 'Menu')
+                  Text(
+                    'Check out our delicious pizzas! 🍕',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                if (value == 'Cart')
+                  Text(
+                    'Your pizza is on the way! 🚗',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                if (value == 'Settings')
+                  Text(
+                    'Configure your app here! ⚙️',
+                    style: TextStyle(fontSize: 20),
+                  ),
+              ],
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
