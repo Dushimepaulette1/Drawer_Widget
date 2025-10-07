@@ -50,4 +50,42 @@ class PizzaApp extends StatelessWidget {
                 ),
               ),
             ),
+            ListTile(
+              leading: Icon(Icons.home, color: Colors.red),
+              title: Text('Home'),
+              onTap: () {
+                currentPage.value = 'Home';
+                Navigator.pop(context);
+              },
+            ),
+
+
+            ListTile(
+              leading: Icon(Icons.restaurant, color: Colors.red),
+              title: Text('Menu'),
+              onTap: () {
+                currentPage.value = 'Menu';
+                Navigator.pop(context);
+              },
+            ),
+
+
+            ListTile(
+              leading: Icon(Icons.shopping_cart, color: Colors.red),
+              title: Text('Cart'),
+              onTap: () {
+                currentPage.value = 'Cart';
+                Navigator.pop(context);
+              },
+            ),
+
+
+            ListTile(
+              leading: Icon(Icons.settings, color: Colors.red),
+              title: Text('Settings'),
+              onTap: () {
+                currentPage.value = 'Settings';
+                Navigator.pop(context);
+              },
+
 
